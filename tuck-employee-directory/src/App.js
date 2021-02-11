@@ -43,6 +43,7 @@ function App() {
       return (emp.name.first.includes(searchFilter) || emp.name.last.includes(searchFilter) || emp.phone.includes(searchFilter) || emp.email.includes(searchFilter) || emp.dob.date.includes(searchFilter));
     });
     setEmpSortArr(arr);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sortType, sortDesc, searchFilter]);
 
   const handleSort = sort => {
